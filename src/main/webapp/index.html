@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cifrado DES</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="estilos.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="contodo">
+            <div class="htodo">
+                <h1>Cifrado DES</h1>
+                <div class="contcif">
+                    <div class="contenido">
+                        <label>Clave:</label>&nbsp&nbsp&nbsp<input type="text"><br><br><br>
+                        <div class="archfil">
+                            Archivo:&nbsp
+                            <label for="archivo">Selecciona el archivo</label>
+                            <input type="file" id="archivo" size="20"><br>
+                            <h6 id="nombre"></h6>
+                        </div>
+                        
+                        <div class="opcdesocif">
+                            <label>Cifrar
+                                <input type="radio" name="opcioncif" value="cifrar">
+                            </label> 
+                            <label>Descifrar
+                                <input type="radio" name="opcioncif" value="descifrar">
+                            </label>
+                        </div>
+                        <a href="">Subir</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    
+        <script type="text/javascript">
+            let archivo = document.querySelector('#archivo');
+            archivo.addEventListener('change',()=>{
+                document.querySelector('#nombre').innerText=archivo.files[0].name;
+            });
+        </script>
+    </body>
+</html>
